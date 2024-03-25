@@ -24,6 +24,17 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -34,7 +45,6 @@
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
@@ -42,32 +52,64 @@
                       <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
+              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
+              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="395" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                   <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel8" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="11" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,7 +151,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        for (int i = 0; i &lt;= w/2; i+=5){&#xa;            g.drawLine(i,h, w/2, h-i);&#xa;            g.drawLine(w-i,h,w/2,h-i);&#xa;            g.drawLine(i,0,w/2,i);&#xa;            g.drawLine(w-i,0,w/2,i);&#xa;            g.drawLine(i,h-i,w/2-i,h/2-i);&#xa;            g.drawLine(w-i,i,w/2+i,h/2+i);&#xa;        }&#xa;&#xa;    }&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        for (int i = 0; i &lt;= w/2; i+=5){&#xa;            g.drawLine(i,i,w/2,(h/2)-i);&#xa;            g.drawLine(w-i,i,w/2,(h/2)-i);&#xa;            g.drawLine((w/2)+i,(h/2)-i,w,i);&#xa;            g.drawLine((w/2)-i,(h/2)-i,0,i);&#xa;            g.drawLine(0,(h/2)+i,i,h);&#xa;            g.drawLine(w,(h/2)+i,w-i,h);&#xa;        }&#xa;        for (int i = 0; i &lt;= w/4; i+=5){&#xa;            g.drawLine(w/2,((3*h)/4)+i,((3*w)/4)-i,((3*h)/4));&#xa;            g.drawLine(w/2,((3*h)/4)+i,((1*w)/4)+i,((3*h)/4));&#xa;            g.drawLine(w/2,((3*h)/4)-i,((3*w)/4)-i,((3*h)/4));&#xa;            g.drawLine(w/2,((3*h)/4)-i,((1*w)/4)+i,((3*h)/4));&#xa;        }&#xa;    }&#xa;}"/>
       </AuxValues>
 
       <Layout>
@@ -187,7 +229,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        for (int i = 0; i &lt;= w/2; i+=5){&#xa;            //Techo&#xa;            g.drawLine(0,h/2-i,i,0);&#xa;            g.drawLine(w,h/2-i,w-i,0);&#xa;            //centro&#xa;            g.drawLine(i,h-i,w/2,h/2-i);&#xa;            g.drawLine(w-i,h-i,w/2,h/2-i);&#xa;            g.drawLine(i,h-i,w/2+i,h/2+i);&#xa;&#xa;            //g.drawLine(i,h/2, w/2, h/2-i);&#xa;            //g.drawLine(w-i,h/2,w/2,h/2-i);&#xa;            //g.drawLine(i,h/2,w/2,h/2+i);&#xa;            //g.drawLine(w-i,h/2,w/2,h/2+i);&#xa;        }&#xa;&#xa;        for(int i = 0; i &lt;= w/4; i+=5){&#xa;            //piso&#xa;            g.drawLine(w/4+i,h,w/2,h-i);&#xa;            g.drawLine(3*w/4-i,h,w/2,h-i);&#xa;        }&#xa;    }&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        for (int i = 0; i &lt;= w/2; i+=5){&#xa;            g.drawLine(i,h/2, w/2, h/2-i);&#xa;            g.drawLine(w-i,h/2,w/2,h/2-i);&#xa;            g.drawLine(i,h/2,w/2,h/2+i);&#xa;            g.drawLine(w-i,h/2,w/2,h/2+i);&#xa;&#xa;            //pegado al borde&#xa;            g.drawLine(0,h/2-i,i,0);&#xa;            g.drawLine(w,h/2-i,w-i,0);&#xa;&#xa;            g.drawLine((w/2)-i,h,0,h-i);&#xa;            g.drawLine((w/2)+i,h,w,h-i);&#xa;        }&#xa;    }&#xa;}"/>
       </AuxValues>
 
       <Layout>
@@ -213,7 +255,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        for (int i = 0; i &lt;= w; i+=5){&#xa;            g.drawLine(i,h-i, i, i);&#xa;            g.drawLine(i,i,w-i,i);&#xa;        }&#xa;    }&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        for (int i = 0; i &lt;= w/2; i+=5){&#xa;            g.drawLine(i,i,w/2,(h/2)-i);&#xa;            g.drawLine(w-i,i,w/2,(h/2)-i);&#xa;            g.drawLine(i,h-i,w/2,(h/2)+i);&#xa;            g.drawLine(h-i,w-i,w/2,(h/2)+i);&#xa;            g.drawLine(w-i,h/2,(w/2)+i,(h/2)-i);&#xa;            g.drawLine(w-i,h/2,(w/2)+i,(h/2)+i);&#xa;            g.drawLine(i,h/2,(w/2)-i,(h/2)-i);&#xa;            g.drawLine(i,h/2,(w/2)-i,(h/2)+i);&#xa;        }&#xa;    }&#xa;}"/>
       </AuxValues>
 
       <Layout>
@@ -239,7 +281,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        for (int i = 0; i &lt;= w/2; i+=5){&#xa;            g.drawLine(i,h-i, w/2, i);&#xa;            g.drawLine(w-i,h-i,w/2,i);&#xa;            g.drawLine(i,h-i,w-i,h-i);&#xa;        }&#xa;    }&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        for (int i = 0; i &lt;= w/2; i+=5){&#xa;            g.drawLine(i,h-i, w/2, i);&#xa;            g.drawLine(w-i,h-i,w/2,i);&#xa;            g.drawLine(w/2, i,w/2,i);&#xa;        }&#xa;    }&#xa;}"/>
       </AuxValues>
 
       <Layout>
@@ -265,7 +307,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;         int r = 10;&#xa;        for(int i = 0; i&lt;w;i+=10){&#xa;            //g.drawLine(0,i, jPanel7.getWidth()/2,jPanel7.getHeight()/2 );&#xa;            //g.drawLine(jPanel7.getWidth()/2,jPanel7.getHeight()/2, jPanel7.getWidth(), i);&#xa;            g.drawOval( (w-(r+i))/2, (h-(r+i))/2,r+i, r+i );&#xa;        }&#xa;    }&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent (g);&#xa;        int h = jPanel1.getHeight();&#xa;        int w = jPanel1.getWidth();&#xa;        int r = 10;&#xa;        for (int x=0; x&lt;w; x+=10) {&#xa;            for (int y=0;y&lt;h;y+=10) {&#xa;                g.drawRect(x,y,10,10);&#xa;            }&#xa;        }&#xa;        for (int i = 0; i &lt;= w; i += 10) {&#xa;            g.drawLine(i,0,w,h-i);&#xa;            g.drawLine(0,i,w-i,h);&#xa;        }&#xa;    }&#xa;}"/>
       </AuxValues>
 
       <Layout>
@@ -281,5 +323,53 @@
         </DimensionLayout>
       </Layout>
     </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ejemplo 8"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ejemplo 9"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ejemplo 5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ejemplo 5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Una reja"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Un cursor"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="spiderweb"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="un rombo flotando"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Menu"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

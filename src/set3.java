@@ -8,7 +8,7 @@ import java.awt.Graphics;
 
 /**
  *
- * @author jesus
+ * @author luis 
  */
 public class set3 extends javax.swing.JFrame {
 
@@ -61,14 +61,19 @@ public class set3 extends javax.swing.JFrame {
                 int h = jPanel1.getHeight();
                 int w = jPanel1.getWidth();
                 for (int i = 0; i <= w/2; i+=5){
-                    g.drawLine(i,h, w/2, h-i);
-                    g.drawLine(w-i,h,w/2,h-i);
-                    g.drawLine(i,0,w/2,i);
-                    g.drawLine(w-i,0,w/2,i);
-                    g.drawLine(i,h-i,w/2-i,h/2-i);
-                    g.drawLine(w-i,i,w/2+i,h/2+i);
+                    g.drawLine(i,i,w/2,(h/2)-i);
+                    g.drawLine(w-i,i,w/2,(h/2)-i);
+                    g.drawLine((w/2)+i,(h/2)-i,w,i);
+                    g.drawLine((w/2)-i,(h/2)-i,0,i);
+                    g.drawLine(0,(h/2)+i,i,h);
+                    g.drawLine(w,(h/2)+i,w-i,h);
                 }
-
+                for (int i = 0; i <= w/4; i+=5){
+                    g.drawLine(w/2,((3*h)/4)+i,((3*w)/4)-i,((3*h)/4));
+                    g.drawLine(w/2,((3*h)/4)+i,((1*w)/4)+i,((3*h)/4));
+                    g.drawLine(w/2,((3*h)/4)-i,((3*w)/4)-i,((3*h)/4));
+                    g.drawLine(w/2,((3*h)/4)-i,((1*w)/4)+i,((3*h)/4));
+                }
             }
         };
         jPanel3 = new javax.swing.JPanel(){
@@ -117,24 +122,17 @@ public class set3 extends javax.swing.JFrame {
                 int h = jPanel1.getHeight();
                 int w = jPanel1.getWidth();
                 for (int i = 0; i <= w/2; i+=5){
-                    //Techo
+                    g.drawLine(i,h/2, w/2, h/2-i);
+                    g.drawLine(w-i,h/2,w/2,h/2-i);
+                    g.drawLine(i,h/2,w/2,h/2+i);
+                    g.drawLine(w-i,h/2,w/2,h/2+i);
+
+                    //pegado al borde
                     g.drawLine(0,h/2-i,i,0);
                     g.drawLine(w,h/2-i,w-i,0);
-                    //centro
-                    g.drawLine(i,h-i,w/2,h/2-i);
-                    g.drawLine(w-i,h-i,w/2,h/2-i);
-                    g.drawLine(i,h-i,w/2+i,h/2+i);
 
-                    //g.drawLine(i,h/2, w/2, h/2-i);
-                    //g.drawLine(w-i,h/2,w/2,h/2-i);
-                    //g.drawLine(i,h/2,w/2,h/2+i);
-                    //g.drawLine(w-i,h/2,w/2,h/2+i);
-                }
-
-                for(int i = 0; i <= w/4; i+=5){
-                    //piso
-                    g.drawLine(w/4+i,h,w/2,h-i);
-                    g.drawLine(3*w/4-i,h,w/2,h-i);
+                    g.drawLine((w/2)-i,h,0,h-i);
+                    g.drawLine((w/2)+i,h,w,h-i);
                 }
             }
         };
@@ -143,9 +141,15 @@ public class set3 extends javax.swing.JFrame {
                 super.paintComponent (g);
                 int h = jPanel1.getHeight();
                 int w = jPanel1.getWidth();
-                for (int i = 0; i <= w; i+=5){
-                    g.drawLine(i,h-i, i, i);
-                    g.drawLine(i,i,w-i,i);
+                for (int i = 0; i <= w/2; i+=5){
+                    g.drawLine(i,i,w/2,(h/2)-i);
+                    g.drawLine(w-i,i,w/2,(h/2)-i);
+                    g.drawLine(i,h-i,w/2,(h/2)+i);
+                    g.drawLine(h-i,w-i,w/2,(h/2)+i);
+                    g.drawLine(w-i,h/2,(w/2)+i,(h/2)-i);
+                    g.drawLine(w-i,h/2,(w/2)+i,(h/2)+i);
+                    g.drawLine(i,h/2,(w/2)-i,(h/2)-i);
+                    g.drawLine(i,h/2,(w/2)-i,(h/2)+i);
                 }
             }
         };
@@ -157,7 +161,7 @@ public class set3 extends javax.swing.JFrame {
                 for (int i = 0; i <= w/2; i+=5){
                     g.drawLine(i,h-i, w/2, i);
                     g.drawLine(w-i,h-i,w/2,i);
-                    g.drawLine(i,h-i,w-i,h-i);
+                    g.drawLine(w/2, i,w/2,i);
                 }
             }
         };
@@ -167,13 +171,26 @@ public class set3 extends javax.swing.JFrame {
                 int h = jPanel1.getHeight();
                 int w = jPanel1.getWidth();
                 int r = 10;
-                for(int i = 0; i<w;i+=10){
-                    //g.drawLine(0,i, jPanel7.getWidth()/2,jPanel7.getHeight()/2 );
-                    //g.drawLine(jPanel7.getWidth()/2,jPanel7.getHeight()/2, jPanel7.getWidth(), i);
-                    g.drawOval( (w-(r+i))/2, (h-(r+i))/2,r+i, r+i );
+                for (int x=0; x<w; x+=10) {
+                    for (int y=0;y<h;y+=10) {
+                        g.drawRect(x,y,10,10);
+                    }
+                }
+                for (int i = 0; i <= w; i += 10) {
+                    g.drawLine(i,0,w,h-i);
+                    g.drawLine(0,i,w-i,h);
                 }
             }
         };
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -289,10 +306,43 @@ public class set3 extends javax.swing.JFrame {
             .addGap(0, 200, Short.MAX_VALUE)
         );
 
+        jLabel1.setText("Ejemplo 8");
+
+        jLabel2.setText("Ejemplo 9");
+
+        jLabel3.setText("Ejemplo 5");
+
+        jLabel4.setText("Ejemplo 5");
+
+        jLabel5.setText("Una reja");
+
+        jLabel6.setText("Un cursor");
+
+        jLabel7.setText("spiderweb");
+
+        jLabel8.setText("un rombo flotando");
+
+        jButton1.setText("Menu");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(154, 154, 154)
+                .addComponent(jLabel2)
+                .addGap(160, 160, 160)
+                .addComponent(jLabel4)
+                .addGap(112, 112, 112))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,38 +353,70 @@ public class set3 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel8)
+                .addGap(148, 148, 148)
+                .addComponent(jLabel7)
+                .addGap(169, 169, 169)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(117, 117, 117))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(395, 395, 395))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new ilusionOptica().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -372,6 +454,15 @@ public class set3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
